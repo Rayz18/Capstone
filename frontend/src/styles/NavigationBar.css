@@ -1,0 +1,73 @@
+/* Reset body margins and paddings */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the navigation bar aligns properly without stretching */
+.navigation-bar {
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #B19CD9; /* Purple background */
+  padding: 10px 20px; /* Adjust padding as needed */
+  color: rgb(67, 24, 116);
+  width: 100%; /* Takes full width of its container */
+  box-sizing: border-box; /* Includes padding in the width */
+  margin: 0; /* Removes any default margin */
+}
+
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+.nav-title {
+  font-family: inherit; /* Use the font-family set on the body */
+  font-size: 12px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px; /* Adjust gap for spacing */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* Pushes the menu to the right side */
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu li a {
+  font-family: inherit;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.nav-menu li a:hover {
+  color: #f0e6f7; /* Light color on hover */
+}
+
+.profile-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Optional: Adds a small gap between the menu and the icon */
+}
+
+.profile-icon img {
+  height: 40px; /* Adjust size as needed */
+  cursor: pointer;
+}

@@ -1,0 +1,5 @@
+/* Set Arial as the global font for the entire application */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
