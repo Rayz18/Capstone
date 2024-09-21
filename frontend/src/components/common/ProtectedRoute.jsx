@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom";
-import { jwtDecode } from 'jwt-decode'; 
-import api from "../api";
-import { REFRESH_TOKEN, ACCESS_TOKEN } from "../constants";
-import { useState, useEffect, useCallback } from "react";  // Import useCallback
-import PropTypes from 'prop-types';  // Import PropTypes
+import {jwtDecode} from 'jwt-decode';
+import api from "../../api";  // Same level
+import { REFRESH_TOKEN, ACCESS_TOKEN } from "../../constants";  // Same level
+import { useState, useEffect, useCallback } from "react";
+import PropTypes from 'prop-types';
 
 function ProtectedRoute({ children }) {
     const [isAuthorized, setIsAuthorized] = useState(null);

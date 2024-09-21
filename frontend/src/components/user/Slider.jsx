@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
-import "../styles/Slider.css";
+import "../../styles/user/Slider.css";  // Correct path
+import A from '../../assets/photos/A.jpg';  // Access photos from assets
+import B from '../../assets/photos/B.jpg';  // Same as above
+import C from '../../assets/photos/C.jpg';  // Same as above
 
-import A from '../assets/photos/A.jpg';
-import B from '../assets/photos/B.jpg';
-import C from '../assets/photos/C.jpg';
 
 const Slider = () => {
     const images = [A, B, C];

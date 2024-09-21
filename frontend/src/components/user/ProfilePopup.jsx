@@ -1,7 +1,6 @@
-import "../styles/ProfilePopup.css";
+import "../../styles/user/ProfilePopup.css";  // Correct path to CSS
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 
 const ProfilePopup = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
-import Slider from "../components/Slider";
-import NavigationBar from "../components/NavigationBar";
-import "../styles/Home.css";
+import Slider from "../../components/user/Slider";  // Go up one level to access components
+import NavigationBar from "../../components/user/NavigationBar";  // Same as above
+import "../../styles/user/Home.css";  // Correct path to styles
 
 const Home = () => {
   const images = [

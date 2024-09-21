@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import api from "../api";
-import '../styles/StaffDashboard.css';
+import api from "../../api";  // Stay on the same level for api.js
+import "../../styles/staff/StaffDashboard.css";  // Correct path
 
 const StaffDashboard = () => {
   const [title, setTitle] = useState('');
