@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import api from "../api"; // Your axios instance
-import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
+import api from "../../api";  // Stay on the same level for api.js
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../constants";  // Same level
 import { useNavigate } from 'react-router-dom';
-import '../styles/LoginStaff.css';
+import "../../styles/staff/LoginStaff.css";  // Correct path to staff folder
 
 const LoginStaff = () => {
   const [username, setUsername] = useState('');

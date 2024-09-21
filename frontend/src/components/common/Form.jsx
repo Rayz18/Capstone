@@ -1,11 +1,10 @@
 import { useState } from "react";
-import api from "../api";
+import api from "../../api";  // Same level
 import { useNavigate } from "react-router-dom";
-import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
-import "../styles/Form.css"
-import PropTypes from 'prop-types'; // Import PropTypes
-import LoadingIndicator from "./LoadingIndicator";
-
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../constants";  // Same level
+import "../../styles/common/Form.css";  // Correct path to styles folder
+import PropTypes from 'prop-types'; 
+import LoadingIndicator from "./LoadingIndicator";  // Same folder level for common components
 
 function Form({ route, method }) {
     const [username, setUsername] = useState("");

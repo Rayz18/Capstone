@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import AboutUs from "./pages/AboutUs";
-import Program from "./pages/Program";
-import AdvocacyCampaign from "./pages/AdvocacyCampaign";
-import Certificate from "./pages/Certificate";
-import ConnectWithUs from "./pages/ConnectWithUs";
-import LoginStaff from "./pages/LoginStaff";  // Import the LoginStaff component
-import StaffDashboard from "./pages/StaffDashboard";  // Import the StaffDashboard component
-import ProtectedRoute from "./components/ProtectedRoute";  // Import ProtectedRoute
+import Login from "./pages/user/Login";
+import Register from "./pages/user/Register";
+import Home from "./pages/user/Home";
+import NotFound from "./pages/common/NotFound";
+import AboutUs from "./pages/user/AboutUs";
+import Program from "./pages/user/Program";
+import AdvocacyCampaign from "./pages/user/AdvocacyCampaign";
+import Certificate from "./pages/user/Certificate";
+import ConnectWithUs from "./pages/user/ConnectWithUs";
+import LoginStaff from "./pages/staff/LoginStaff";  // Import the LoginStaff component
+import StaffDashboard from "./pages/staff/StaffDashboard";  // Import the StaffDashboard component
+import ProtectedRoute from "./components/common/ProtectedRoute";  // Import ProtectedRoute
 import './App.css'; 
 
 function App() {
