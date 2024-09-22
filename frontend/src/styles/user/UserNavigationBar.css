@@ -1,16 +1,14 @@
-/* Reset body margins and paddings */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Navigation bar styles */
-.navigation-bar {
+.user-navigation-bar {
   font-family: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #B19CD9; /* Purple background */
+  background-color: #B19CD9;
   padding: 10px 20px;
   color: rgb(67, 24, 116);
   width: 100%;
@@ -18,37 +16,37 @@ body {
   margin: 0;
 }
 
-.nav-logo {
+.user-nav-logo {
   display: flex;
   align-items: center;
 }
 
-.logo {
+.user-logo {
   height: 45px;
   margin-right: 5px;
 }
 
-.nav-titles {
+.user-nav-titles {
   display: flex;
   flex-direction: column;
-  text-align: left; /* Ensures the titles are left-aligned */
+  text-align: left;
 }
 
-.nav-title {
+.user-nav-title {
   font-family: inherit;
   font-weight: bolder;
   color: rgb(86, 28, 109);
 }
 
 .main-title {
-  font-size: 10px; /* Adjusted size for the main title */
+  font-size: 10px;
 }
 
 .sub-title {
-  font-size: 10px; /* Slightly smaller size for the sub-title */
+  font-size: 10px;
 }
 
-.nav-menu {
+.user-nav-menu {
   display: flex;
   gap: 15px;
   list-style: none;
@@ -57,11 +55,11 @@ body {
   margin-left: auto;
 }
 
-.nav-menu li {
+.user-nav-menu li {
   display: inline;
 }
 
-.nav-menu li a {
+.user-nav-menu li a {
   font-family: inherit;
   color: white;
   text-decoration: none;
@@ -69,17 +67,17 @@ body {
   font-weight: bold;
 }
 
-.nav-menu li a:hover {
+.user-nav-menu li a:hover {
   color: #f0e6f7;
 }
 
-.profile-icon {
+.user-profile-icon {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
 
-.profile-icon img {
-  height: 40px;
+.user-profile-icon img {
+  height: 33px;
   cursor: pointer;
 }
