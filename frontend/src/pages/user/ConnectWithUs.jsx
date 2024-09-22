@@ -1,12 +1,12 @@
 import React from 'react';
-import NavigationBar from '../components/NavigationBar'; // Import the NavigationBar component
-import '../styles/ConnectWithUs.css'; // Ensure this CSS file exists
+import UserNavigationBar from '../../components/user/UserNavigationBar'; // Import the NavigationBar component
+import '../../styles/user/ConnectWithUs.css'; // Ensure this CSS file exists
 
 const ConnectWithUs = () => {
     return (
         <div className="connect-container">
             {/* Replace the hardcoded nav with your NavigationBar component */}
-            <NavigationBar /> 
+            <UserNavigationBar/> 
 
             <div className="content">
                 <h1 className="title">Contact Us</h1>
