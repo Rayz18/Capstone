@@ -1,0 +1,188 @@
+/* Ensure the body and html take the full width and height */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the About Us section */
+.about-us-container {
+    width: 100%; /* Use full width */
+    margin: 0;
+    padding: 0; /* Remove padding */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add margin between header and image */
+.header-image-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2px; /* Space between header and image */
+}
+
+/* Add margin between the image and content */
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 5px; /* Space between image and About Us container */
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Ensure they start from the same point */
+    justify-content: space-between; /* Add spacing between sidebar and main content */
+    gap: 10px; /* Consistent spacing */
+}
+
+/* Sidebar styling */
+.sidebar { 
+    width: 25%; 
+    background-color: rgb(255, 251, 251) !important; 
+    padding: 20px; 
+    border: 1px solid #B19CD9;
+    border-radius: 5px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.sidebar-header {
+    background-color: #B19CD9;
+    color: rgb(67, 24, 116); /* Changed font color */
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #B19CD9;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    color:  rgb(67, 24, 116);
+    background-color: #B19CD9; /* Changed font color */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    border: 1px solid #B19CD9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul li:hover {
+    background-color: #B19CD9;
+    color: rgb(67, 24, 116); /* Changed font color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    margin: 0; /* Remove margins */
+}
+
+/* Add space between sections */
+.section-container {
+    border: 1px solid #B19CD9;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add space between sections */
+}
+
+.section-container h2 {
+    background-color: #B19CD9;
+    color: rgb(67, 24, 116); /* Changed font color */
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #B19CD9;
+}
+
+/* Footer styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #B19CD9;
+    color: rgb(67, 24, 116); /* Changed font color */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logos img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.organization-profile-section, 
+.gad-plan-budget-section, 
+.gad-focal-person-system-section, 
+.project-activity-program-section {
+    border: 1px solid #B19CD9; /* Border color matching the theme */
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    background-color: white;
+}
+
+.section-container h2, 
+.organization-profile-section h2, 
+.gad-plan-budget-section h2, 
+.gad-focal-person-system-section h2, 
+.project-activity-program-section h2 {
+    background-color: #B19CD9;
+    color: rgb(67, 24, 116); /* Changed font color */
+    padding: 10px;
+    margin: -20px -20px 20px -20px; /* Full-width heading for each section */
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #B19CD9; /* Bottom border for section header */
+}
+
+/* Ensure About Us section and sidebar are aligned */
+.sidebar {
+    width: 25%; /* Ensure sidebar takes 25% of the width */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #B19CD9;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+}
