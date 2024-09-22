@@ -1,15 +1,8 @@
-/* Reset body margins and paddings */
-body {
-  margin: 0;
-  padding: 0;
-}
-
 /* Ensure the navigation bar aligns properly without stretching */
 .navigation-bar {
-  font-family: inherit;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between left (logo and title) and right (menu, profile) */
   background-color: #B19CD9; /* Purple background */
   padding: 10px 20px; /* Adjust padding as needed */
   color: rgb(67, 24, 116);
@@ -18,10 +11,12 @@ body {
   margin: 0; /* Removes any default margin */
 }
 
-
+/* Align logo and title on the left */
 .nav-logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* This ensures the logo and title stay on the left */
+  flex-grow: 1; /* Takes up available space on the left */
 }
 
 .logo {
@@ -31,11 +26,14 @@ body {
 
 .nav-title {
   font-family: inherit; /* Use the font-family set on the body */
-  font-size: 12px;
-  font-weight: bolder;
+  font-size: 16px; /* Adjust as needed */
+  font-weight: bold;
+  color: rgb(67, 24, 116);
   text-transform: uppercase;
+  white-space: nowrap; /* Ensure the title doesn't wrap */
 }
 
+/* Navigation menu styles, ensure it's on the right */
 .nav-menu {
   display: flex;
   gap: 20px; /* Adjust gap for spacing */
@@ -53,7 +51,7 @@ body {
   font-family: inherit;
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px; /* Adjust size as needed */
   font-weight: bold;
 }
 
@@ -61,10 +59,11 @@ body {
   color: #f0e6f7; /* Light color on hover */
 }
 
+/* Profile icon styles */
 .profile-icon {
   display: flex;
   align-items: center;
-  margin-left: 10px; /* Optional: Adds a small gap between the menu and the icon */
+  margin-left: 10px;
 }
 
 .profile-icon img {
