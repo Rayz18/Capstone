@@ -1,5 +1,5 @@
 import Slider from "../../components/user/Slider";  // Go up one level to access components
-import NavigationBar from "../../components/user/NavigationBar";  // Same as above
+import UserNavigationBar from "../../components/user/UserNavigationBar";  // Same as above
 import "../../styles/user/Home.css";  // Correct path to styles
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <NavigationBar /> {/* Use the NavigationBar component */}
+      <UserNavigationBar /> {/* Use the NavigationBar component */}
       <Slider images={images} />
     </div>
   );

@@ -1,39 +1,75 @@
 import { useState } from 'react';
-import api from "../../api";  // Stay on the same level for api.js
-import "../../styles/staff/StaffDashboard.css";  // Correct path
+import logo from '../../assets/photos/GAD.png';
+import backButtonImage from '../../assets/photos/backbutton.png';
+import StaffNavigationBar from '../../components/staff/StaffNavigationBar'; // Import the new NavigationBar
+import "../../styles/staff/StaffDashboard.css";
 
 const StaffDashboard = () => {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [currentView, setCurrentView] = useState(null);
+  const [isAddingCampaign, setIsAddingCampaign] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await api.post('/content/create/', { title, body });  // No need to store 'res'
-      alert('Content created successfully');
-    } catch (error) {
-      console.error(error);  // Optionally log the error
-      alert('Failed to create content');
-    }
+  const handleNavigationClick = (view) => {
+    setCurrentView(view);
+    setIsAddingCampaign(false);
+  };
+
+  const handleAddCampaignClick = () => {
+    setIsAddingCampaign(true);
+  };
+
+  const handleBackClick = () => {
+    setIsAddingCampaign(false);
   };
 
   return (
     <div className="dashboard-container">
-      <h1>Create New Content</h1>
-      <form className="content-form" onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="Title" 
-          value={title} 
-          onChange={(e) => setTitle(e.target.value)} 
+      <header className="dashboard-header">
+        <div className="header-content">
+          <img src={logo} alt="GAD Logo" className="logo" />
+          <div className="text-section">
+            <h2>Batangas State University - The National Engineering University</h2>
+            <h3>Staff Dashboard - Gender and Development</h3>
+          </div>
+        </div>
+        <StaffNavigationBar
+          currentView={currentView}
+          handleNavigationClick={handleNavigationClick}
         />
-        <textarea 
-          placeholder="Body" 
-          value={body} 
-          onChange={(e) => setBody(e.target.value)} 
-        ></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      </header>
+      <div className="dashboard-content">
+        {currentView === 'program' && <p>This is the Program Management Page, Welcome!</p>}
+        {currentView === 'campaign' && !isAddingCampaign && (
+          <>
+            <p className="grey-text">No available campaign as of the moment...</p>
+            <button className="add-campaign-button" onClick={handleAddCampaignClick}>
+              Add Campaign
+            </button>
+          </>
+        )}
+        {currentView === 'campaign' && isAddingCampaign && (
+          <div className="campaign-form-container">
+            <button className="back-button" onClick={handleBackClick}>
+              <img src={backButtonImage} alt="Back Button" className="back-button-image" />
+              <span className="back-button-text">Go back</span>
+            </button>
+            <div className="campaign-form">
+              <label htmlFor="title">Campaign Title:</label>
+              <input type="text" id="title" name="title" />
+
+              <label htmlFor="description">Description:</label>
+              <textarea id="description" name="description"></textarea>
+
+              <label htmlFor="date">Date:</label>
+              <input type="date" id="date" name="date" />
+
+              <label htmlFor="photo">Insert Photo:</label>
+              <input type="file" id="photo" name="photo" accept="image/*" />
+
+              <button type="submit" className="submit-button">Set Campaign</button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

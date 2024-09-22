@@ -1,8 +1,8 @@
 .slider-container {
     position: relative;
-    width: 99.9%;
+    width: 100%;
     max-width: 1500px; /* Increase the maximum width for a bigger slider */
-    margin: 2px auto 0 auto;
+    margin: 0px auto 0 auto;
     overflow: hidden;
     border-radius: 2px;
 }
