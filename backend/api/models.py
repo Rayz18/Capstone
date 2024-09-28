@@ -13,5 +13,12 @@ class Content(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
 
+class Program(models.Model):
+    title = models.CharField(max_length=255)
+    photo = models.ImageField(upload_to='program_photos/', null=True, blank=True)  # Allow blank or null if optional)
+    staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
     def __str__(self):
         return self.title

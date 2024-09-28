@@ -1,0 +1,176 @@
+/* General Layout */
+.dashboard-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    font-family: inherit;
+}
+
+/* Text Styling */
+.grey-text {
+    color: grey;
+    font-size: 1.2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Add Campaign Button */
+.add-campaign-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-campaign-button:hover {
+    background-color: #0056b3;
+}
+
+/* Campaign Form */
+.campaign-form-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.campaign-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid rgb(67, 24, 116);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-form label {
+    font-weight: bold;
+    color: rgb(67, 24, 116);
+    margin-bottom: 5px;
+}
+
+.campaign-form input[type="text"],
+.campaign-form input[type="date"],
+.campaign-form textarea,
+.campaign-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid rgb(67, 24, 116);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.campaign-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.campaign-form input[type="file"] {
+    padding: 5px;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Back Button */
+.back-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 5px !important;
+}
+
+.back-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.back-button-image {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.back-button-text {
+    font-size: 1em;
+    color: rgb(67, 24, 116);
+    white-space: nowrap;
+}
+
+.back-button:hover .back-button-image {
+    transform: scale(1.1);
+}
+
+.back-button:hover .back-button-text {
+    color: #0056b3;
+}
+
+/* File Buttons Container */
+.file-buttons-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.file-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific Styling for Related Activities Button */
+.related-activities-button {
+    background-color: #28a745;
+}
+
+.related-activities-button:hover {
+    background-color: #218838;
+}

@@ -1,34 +1,21 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: 'Times New Roman', serif;
+/* Remove the modal styles */
+.modal-overlay {
+  display: none;
 }
 
-.dashboard-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    font-family: inherit;
+.modal {
+  display: none;
 }
 
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #B19CD9;
-    padding: 15px;
-    color: rgb(67, 24, 116);
-    font-family: inherit;
+.modal-button {
+  display: none;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    font-family: inherit;
-    width: 70%;
-    white-space: nowrap;
+.modal-close-button {
+  display: none;
 }
+<<<<<<< HEAD
+=======
 
 .logo {
     width: 50px;
@@ -419,3 +406,4 @@ html, body {
 .activity-table td {
     height: fit-content; /* Let the table rows adjust their height based on the content */
 }
+>>>>>>> fd547e038955269af31e82705b6b740caf9b1a2b

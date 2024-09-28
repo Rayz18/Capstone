@@ -1,4 +1,17 @@
 import { useState } from 'react';
+<<<<<<< HEAD
+import StaffNavigationBar from "../../components/staff/StaffNavigationBar";
+import ProgramManagement from "../../pages/staff/ProgramManagement";
+import CampaignManagement from "../../pages/staff/CampaignManagement";
+import "../../styles/staff/StaffDashboard.css";
+
+const StaffDashboard = () => {
+  const [currentView, setCurrentView] = useState('program'); // Default view to 'program'
+
+  // Function to handle navigation bar clicks
+  const handleNavigationClick = (view) => {
+    setCurrentView(view);
+=======
 import logo from '../../assets/photos/GAD.png';
 import backButtonImage from '../../assets/photos/backbutton.png';
 import StaffNavigationBar from '../../components/staff/StaffNavigationBar'; 
@@ -44,10 +57,17 @@ const StaffDashboard = () => {
   const handlePermanentDelete = (index) => {
     const newRecycleBin = recycleBin.filter((_, i) => i !== index);
     setRecycleBin(newRecycleBin);
+>>>>>>> fd547e038955269af31e82705b6b740caf9b1a2b
   };
 
   return (
     <div className="dashboard-container">
+<<<<<<< HEAD
+      <StaffNavigationBar currentView={currentView} handleNavigationClick={handleNavigationClick} />
+      <div className="dashboard-content">
+        {currentView === 'program' && <ProgramManagement />}
+        {currentView === 'campaign' && <CampaignManagement />}
+=======
       <header className="dashboard-header">
         <div className="header-content">
           <img src={logo} alt="GAD Logo" className="logo" />
@@ -207,6 +227,7 @@ const StaffDashboard = () => {
             )}
           </>
         )}
+>>>>>>> fd547e038955269af31e82705b6b740caf9b1a2b
       </div>
     </div>
   );
