@@ -2,10 +2,6 @@ import { useState } from 'react';
 import UserNavigationBar from "../../components/user/UserNavigationBar"; 
 import "../../styles/user/AboutUs.css";
 import genderImage from '../../assets/photos/Gender.jpg';
-import bsuLogo from '../../assets/photos/BSU.png';
-import gadLogo from '../../assets/photos/GAD.png';
-import facebookIcon from '../../assets/photos/facebook.png';
-import twitterIcon from '../../assets/photos/twitter.png';
 
 const AboutUs = () => {
   const [activeSection, setActiveSection] = useState('goals');
@@ -100,25 +96,6 @@ const AboutUs = () => {
               </div>
             </div>
           )}
-        </div>
-      </div>
-
-      <div className="footer">
-        <div className="footer-left">
-          <div className="footer-text">
-            BATANGAS STATE UNIVERSITY - THE NATIONAL ENGINEERING UNIVERSITY GENDER AND DEVELOPMENT UNIT
-          </div>
-          <div className="logos">
-            <img src={bsuLogo} alt="BSU Logo" />
-            <img src={gadLogo} alt="GAD Logo" />
-          </div>
-        </div>
-        <div className="footer-right">
-          <p>Connect With Us:</p>
-          <div className="social-icons">
-            <img src={facebookIcon} alt="Facebook" />
-            <img src={twitterIcon} alt="Twitter" />
-          </div>
         </div>
       </div>
     </div>
