@@ -22,15 +22,17 @@ html, body {
 .header-image-container {
     width: 100%;
     text-align: center;
-    margin-top: 2px; /* Space between header and image */
+    margin-top: 0px; /* Space between header and image */
 }
 
 /* Add margin between the image and content */
 .header-image {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Keep the width intact */
+    height: 500px; /* Adjust the height */
+    object-fit: cover; /* Ensures the image is not stretched */
+    object-position: 0px -50px; /* Adjust to show more faces in the image */
     border-radius: 0px;
-    margin-bottom: 5px; /* Space between image and About Us container */
+    margin-bottom: 10px; /* Space between image and About Us container */
 }
 
 .content-container {
@@ -38,6 +40,7 @@ html, body {
     align-items: flex-start; /* Ensure they start from the same point */
     justify-content: space-between; /* Add spacing between sidebar and main content */
     gap: 10px; /* Consistent spacing */
+    padding-top: 10px; /* Added padding to align with sidebar */
 }
 
 /* Sidebar styling */
@@ -48,6 +51,7 @@ html, body {
     border: 1px solid #B19CD9;
     border-radius: 5px; 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    margin-top: 10px; /* Added margin to align with content container */
 }
 
 .sidebar-header {
@@ -69,8 +73,8 @@ html, body {
 .sidebar ul li {
     padding: 10px 20px;
     cursor: pointer;
-    color:  rgb(67, 24, 116);
-    background-color: #B19CD9; /* Changed font color */
+    color: rgb(67, 24, 116);
+    background-color: #B19CD9; /* Changed background color */
     border-radius: 5px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 10px;
@@ -79,8 +83,8 @@ html, body {
 }
 
 .sidebar ul li:hover {
-    background-color: #B19CD9;
-    color: rgb(67, 24, 116); /* Changed font color */
+    background-color: rgb(67, 24, 116); /* Change background color on hover */
+    color: white; /* Change text color on hover */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -93,13 +97,13 @@ html, body {
 
 /* Add space between sections */
 .section-container {
-    border: 1px solid #B19CD9;
+    border: 1px solid #B19CD9; /* Applying border to all sections */
     border-radius: 5px;
     padding: 20px;
     background-color: white;
     margin-bottom: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Add space between sections */
+    margin-top: 10px; /* Add space between sections */
 }
 
 .section-container h2 {
@@ -152,23 +156,30 @@ html, body {
     margin-left: 10px;
 }
 
-.organization-profile-section, 
+/* Apply border and styling to all sections: Goals, GAD Plan, Focal Person, Privacy Notice, Laws and Policies, and About Gender and Development */
+.goals-section, 
 .gad-plan-budget-section, 
 .gad-focal-person-system-section, 
-.project-activity-program-section {
-    border: 1px solid #B19CD9; /* Border color matching the theme */
+.privacy-notice-section, 
+.laws-and-policies-section, 
+.about-gender-development-section { /* Added class for About Gender and Development */
+    border: 1px solid #B19CD9; /* Ensure each section has the same border */
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px; /* Space between sections */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Consistent shadow */
     background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Consistent shadow */
 }
 
+/* Heading for each section */
 .section-container h2, 
 .organization-profile-section h2, 
 .gad-plan-budget-section h2, 
 .gad-focal-person-system-section h2, 
-.project-activity-program-section h2 {
+.project-activity-program-section h2,
+.privacy-notice-section h2,
+.laws-and-policies-section h2,
+.about-gender-development-section h2 { /* Added for About Gender and Development */
     background-color: #B19CD9;
     color: rgb(67, 24, 116); /* Changed font color */
     padding: 10px;
