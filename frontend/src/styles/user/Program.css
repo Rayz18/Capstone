@@ -1,0 +1,26 @@
+.programs-container {
+    text-align: center;
+}
+
+.no-programs-text {
+    font-size: 18px;
+    color: red;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.program-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.program-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}

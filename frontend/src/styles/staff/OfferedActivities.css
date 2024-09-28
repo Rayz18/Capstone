@@ -1,0 +1,126 @@
+.related-offered-activities-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.related-activities-title {
+    font-size: 1.3em;
+    color: rgb(67, 24, 116);
+    font-weight: bold;
+    margin-top: 5px !important;
+    border: 2px solid rgb(67, 24, 116);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.plus-button {
+    width: 45px;
+    height: 45px;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-top: 5px !important;
+}
+
+.plus-button:hover {
+    transform: scale(1.1);
+}
+
+.activity-textarea {
+    width: 70%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid rgb(67, 24, 116);
+    border-radius: 8px;
+    resize: vertical;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activity-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.activity-table th, .activity-table td {
+    border: 2px solid rgb(67, 24, 116);
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.activity-table th {
+    background-color: #d3d3d3;
+    font-weight: bold;
+}
+
+.activity-table td {
+    background-color: #f9f9f9;
+}
+
+.add-button, .edit-button, .delete-button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 35px;
+}
+
+.add-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+    margin-left: 10px;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+.recycle-bin {
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid rgb(67, 24, 116);
+    padding-top: 10px;
+}
+
+.recycle-bin-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
