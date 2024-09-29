@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.permissions import AllowAny
 from rest_framework.parsers import FormParser, MultiPartParser
+from rest_framework import serializers
+from django.shortcuts import get_object_or_404
 
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -42,7 +44,12 @@ class CreateProgramView(generics.CreateAPIView):
     parser_classes = (MultiPartParser, FormParser)  # Add parsers for handling file uploads
 
     def perform_create(self, serializer):
-        serializer.save(staff=self.request.user.staff)
+        try:
+            staff = get_object_or_404(Staff, user=self.request.user)
+            serializer.save(staff=staff)
+        except Exception as e:
+            print("Error saving program:", str(e))
+            raise serializers.ValidationError("Unable to save program. Please ensure all fields are correctly provided.")
 
 class ListProgramsView(generics.ListAPIView):
     queryset = Program.objects.all()
