@@ -27,7 +27,6 @@ const ProgramManagement = () => {
 
     try {
       console.log("Submitting with formData:", { title, photo });
-      
       const response = await api.post('/api/programs/create/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -46,7 +45,7 @@ const ProgramManagement = () => {
    // Network error or server error
       if (error.response) {
         console.error('Server responded with:', error.response.data);
-        alert(`Server error: ${error.response.data}`);
+        alert(`Server error: ${JSON.stringify(error.response.data)}`);
       } else if (error.request) {
         console.error('No response received:', error.request);
         alert('Network error: No response from server');

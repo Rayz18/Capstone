@@ -1,0 +1,31 @@
+<!-- templates/admin/dashboard.html -->
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<h1>Data Dashboard</h1>
+
+<div class="dashboard-stats">
+    <p><strong>Total Staff Members:</strong> {{ total_staff }}</p>
+    <p><strong>Total Content Entries:</strong> {{ total_content }}</p>
+</div>
+
+<h2>Content Entries by Staff</h2>
+<img src="data:image/png;base64,{{ chart }}" alt="Content Entries Chart">
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Staff Username</th>
+            <th>Number of Content Entries</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in content_by_staff %}
+            <tr>
+                <td>{{ entry.staff__user__username }}</td>
+                <td>{{ entry.count }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

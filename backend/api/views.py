@@ -46,10 +46,11 @@ class CreateProgramView(generics.CreateAPIView):
     def perform_create(self, serializer):
         try:
             staff = get_object_or_404(Staff, user=self.request.user)
+            print("Staff found for user:", staff)
             serializer.save(staff=staff)
         except Exception as e:
             print("Error saving program:", str(e))
-            raise serializers.ValidationError("Unable to save program. Please ensure all fields are correctly provided.")
+            raise serializers.ValidationError("Error during saving program: {str(e)}")
 
 class ListProgramsView(generics.ListAPIView):
     queryset = Program.objects.all()
