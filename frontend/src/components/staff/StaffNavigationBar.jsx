@@ -27,10 +27,10 @@ const StaffNavigationBar = ({ currentView, handleNavigationClick }) => {
         <li>
           <a
             href="#"
-            onClick={() => handleNavigationClick('campaign')}
-            className={currentView === 'campaign' ? 'staff-active' : ''}
+            onClick={() => handleNavigationClick('content-dashboard')}
+            className={currentView === 'content-dashboard' ? 'staff-active' : ''}
           >
-            Campaign Management
+            Content Dashboard
           </a>
         </li>
       </ul>
