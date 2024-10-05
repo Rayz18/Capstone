@@ -49,7 +49,7 @@ SIMPLE_JWT = {
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'backend',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -106,6 +106,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'api.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

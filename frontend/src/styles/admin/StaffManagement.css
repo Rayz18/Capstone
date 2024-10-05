@@ -1,0 +1,31 @@
+.staff-management {
+    padding: 20px;
+  }
+  
+  .staff-create-form {
+    margin-bottom: 20px;
+  }
+  
+  .staff-create-form input {
+    margin-right: 10px;
+    padding: 8px;
+  }
+  
+  .staff-create-form button {
+    padding: 8px 15px;
+  }
+  
+  .staff-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .staff-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+  }
+  

@@ -39,8 +39,13 @@ function ProtectedRoute({ children }) {
         if (tokenExpiration < now) {
             await refreshToken();
         } else {
-            setIsAuthorized(true);
+            if (decoded.is_superuser) {  // Ensure the user is a superuser
+                setIsAuthorized(true);
+            } else {
+                setIsAuthorized(false);
+            }
         }
+
     }, [refreshToken]);  // Include refreshToken as a dependency
 
     useEffect(() => {
