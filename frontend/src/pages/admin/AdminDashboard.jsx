@@ -3,7 +3,6 @@ import "../../styles/admin/AdminDashboard.css"; // Admin styles
 import StaffManagement from '../../pages/admin/StaffManagement';
 import ContentModeration from '../../pages/admin/ContentModeration';
 import DataDashboard from '../../pages/admin/DataDashboard';
-import '../../styles/admin/AdminDashboard.css';
 
 const AdminDashboard = () => {
   const [currentView, setCurrentView] = useState('staff');

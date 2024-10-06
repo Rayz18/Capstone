@@ -72,6 +72,12 @@ class StaffAccountManagementView(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=400)
 
+    def delete(self, request, pk):
+        staff = get_object_or_404(Staff, pk=pk)
+        staff.user.delete()
+        staff.delete()
+        return Response({"message": "Staff deleted successfully."}, status=200)
+
 class ContentModerationView(APIView):
     permission_classes = [IsAdminUser]
 
