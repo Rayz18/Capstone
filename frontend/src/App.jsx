@@ -34,7 +34,7 @@ function App() {
         <Route path="/staff/dashboard" element={<ProtectedRoute><StaffDashboard /></ProtectedRoute>} />
 
         {/* Admin Pages */}
-        <Route path="/admin/login" element={<LoginAdmin />} /> {/* Admin Login */}
+        <Route path="/custom-admin/login" element={<LoginAdmin />} /> {/* Admin Login */}
         <Route path="/custom-admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>

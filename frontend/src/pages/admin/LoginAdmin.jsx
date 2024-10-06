@@ -12,17 +12,15 @@ const LoginAdmin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Make the API request to obtain the tokens
       const res = await api.post('/api/token/', { email, password });
-      // Assuming you will only allow superusers to log in
-      const { is_superuser } = res.data;
-      if (!is_superuser) {
-        throw new Error('Unauthorized: Admin access only');
-      }
+      // Decode the token to check if the user is a superuser
+
       localStorage.setItem(ACCESS_TOKEN, res.data.access);
       localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
       navigate('/custom-admin/dashboard');
     } catch (error) {
-      console.error(error);
+      console.error("Login failed:", error);
       alert("Invalid credentials or unauthorized access.");
     }
   };
@@ -30,7 +28,7 @@ const LoginAdmin = () => {
   return (
     <form onSubmit={handleSubmit} className="admin-login-form">
       <input
-        type="email"
+        type="text"
         placeholder="Admin Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}

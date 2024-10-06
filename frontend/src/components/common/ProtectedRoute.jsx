@@ -1,5 +1,4 @@
 import { Navigate } from "react-router-dom";
-import {jwtDecode} from 'jwt-decode';
 import api from "../../api";  // Same level
 import { REFRESH_TOKEN, ACCESS_TOKEN } from "../../constants";  // Same level
 import { useState, useEffect, useCallback } from "react";
@@ -32,20 +31,8 @@ function ProtectedRoute({ children }) {
             setIsAuthorized(false);
             return;
         }
-        const decoded = jwtDecode(token);
-        const tokenExpiration = decoded.exp;
-        const now = Date.now() / 1000;
-
-        if (tokenExpiration < now) {
-            await refreshToken();
-        } else {
-            if (decoded.is_superuser) {  // Ensure the user is a superuser
-                setIsAuthorized(true);
-            } else {
-                setIsAuthorized(false);
-            }
-        }
-
+        await refreshToken();
+        setIsAuthorized(true);
     }, [refreshToken]);  // Include refreshToken as a dependency
 
     useEffect(() => {
